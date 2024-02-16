@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastapi-crud-docker"
+version = "0.1.0"
+description = "Todo using FastAPI, PostgreSQL and Docker"
+authors = ["Vicrrs <enricofermi2019@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.75.0"
+uvicorn = "^0.17.0"
+sqlalchemy = "^1.4.27"
+psycopg2-binary = "^2.9.3"
+pydantic = "^1.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
