@@ -18,7 +18,7 @@ def get_db():
 def create_task(task: schemas.TaskCreate, db: Session = Depends(get_db)):
     return crud.create_task(db=db, task=task)
 
-@app.get("/tasks/", response_model=list[schemas.TaskInDB]):
+@app.get("/tasks/", response_model=list[schemas.TaskInDB])
 def read_tasks(skip: int=0, limit: int = 100, db: Session = Depends(get_db)):
     tasks = crud.get_tasks(db, skip=skip, limit=limit)
     return tasks
